@@ -18,7 +18,14 @@
 </head>
 
 <body>
-    <div id="gameContainer" class="container">
+    <div id="startScreen" class="container d-flex justify-content-center align-items-center flex-column d-block">
+        <h1>Tamagotchi</h1>
+        <h3>Choose your animal</h3>
+        <button class="btn" id="startBtn">
+            <div class="animal1"></div>
+        </button>
+    </div>
+    <div id="gameContainer" class="container d-none">
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="div">
                 <h2 id="levelHTML">Level</h2>

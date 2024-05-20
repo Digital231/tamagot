@@ -7,6 +7,8 @@ const hungerBar = document.getElementById("hungerBar");
 const joyBar = document.getElementById("joyBar");
 const levelHTML = document.getElementById("levelHTML");
 const gameContainer = document.getElementById("gameContainer");
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
 
 let spritePosition = 0;
 let health = 100;
@@ -15,6 +17,11 @@ let joy = 100;
 let level = 1;
 let isLevelUp = false;
 let isMoving = false;
+
+startBtn.onclick = () => {
+  startScreen.classList.add("d-none");
+  gameContainer.classList.remove("d-none");
+};
 
 function toggleAnimalMovement() {
   animal.classList.toggle("moving");
@@ -144,13 +151,13 @@ function startMiniGame() {
   }, 2000);
 }
 setInterval(() => {
-  levelUpAnimal(animal1Img);
+  levelUpAnimal(animal);
 }, 9000);
 setInterval(hungerBarDown, 1000);
 setInterval(joyBarDown, 1000);
 
 setInterval(() => {
-  spritePosition += 100;
+  spritePosition += 101.01;
   animal.style.backgroundPosition = `-${spritePosition}px -7px`;
 
   if (spritePosition >= 600) {

@@ -10,9 +10,9 @@ body {
 
 .animal {
   background: url(./assets/sprite.jpg);
-  background-position: 0 0;
+  background-position: -10px 0;
   background-size: 600px;
-  width: 100px;
+  width: 90px;
   height: 100px;
 }
 
@@ -35,15 +35,23 @@ body {
 
 @keyframes move {
   0% {
-    transform: translateX(0);
+    transform: translateX(-40vw);
   }
   100% {
-    transform: translateX(
-      49vw
-    ); 
+    transform: translateX(45vw);
   }
 }
 
 .moving {
-  animation: move 5s linear infinite; 
+  animation: move 5s linear infinite;
+}
+
+.animal1 {
+  background: url(./assets/an1.jpg);
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
 }
