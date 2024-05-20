@@ -1,0 +1,49 @@
+body {
+  background-color: cadetblue;
+}
+
+.stats {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.animal {
+  background: url(./assets/sprite.jpg);
+  background-position: 0 0;
+  background-size: 600px;
+  width: 100px;
+  height: 100px;
+}
+
+.random-item {
+  background: url(./assets/coin.png);
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
+
+.buttonsBar {
+  z-index: 999;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      49vw
+    ); 
+  }
+}
+
+.moving {
+  animation: move 5s linear infinite; 
+}
